@@ -25,6 +25,7 @@ const isActiveMobileNav = ref(false)
 watch(isActiveMobileNav, (newValue, oldValue) => {
 	if (newValue == true) {
 		document.querySelector("html").classList.add("no-scroll")
+		console.log("true")
 	} else {
 		document.querySelector("html").classList.remove("no-scroll")
 	}
