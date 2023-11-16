@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./hamburger";
+@import "./fonts";
+@import "./transitions";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+html,
+body {
+	@apply overflow-x-hidden font-primary;
+	&.no-scroll {
+		@apply overflow-hidden;
+	}
+}
+
+.w-container {
+	@apply mx-auto max-w-7xl px-5 xl:px-10;
+}
+.y-distance {
+	@apply py-10 xl:py-14 2xl:py-24;
+}
