@@ -1,7 +1,80 @@
 <script setup>
-import { onMounted } from "vue"
-import data from "@/assets/helpers.json"
-
+import { onMounted, ref } from "vue"
+// import data from "@/assets/helpers.json"
+const data = ref([
+	{
+		id: 1,
+		name: "Роща Баума",
+		image: "img/places/place-1.jpg",
+		slug: "1",
+		lat: "43.24750555013902",
+		long: "76.91522454103087"
+	},
+	{
+		id: 2,
+		name: "Дом Баума",
+		image: "img/places/place-2.jpg",
+		slug: "2",
+		lat: "43.245340888407654",
+		long: "76.91969846566768"
+	},
+	{
+		id: 3,
+		name: "Академия наук",
+		image: "img/places/place-3.jpeg",
+		slug: "3",
+		lat: "43.24661492519598",
+		long: "76.9103855588221"
+	},
+	{
+		id: 4,
+		name: "Памятник Г.К. Бельгеру",
+		image: "img/places/place-4.jpg",
+		slug: "4",
+		lat: "43.25043488740608",
+		long: "76.9112186180247"
+	},
+	{
+		id: 5,
+		name: "Немецкий Дом",
+		image: "img/places/place-5.jpg",
+		slug: "5",
+		lat: "43.249968185074216",
+		long: "76.90530611475234"
+	},
+	{
+		id: 6,
+		name: "Мемориальная доска Э.Ф. Айриху.",
+		image: "img/places/place-6.jpg",
+		slug: "6",
+		lat: "43.246924972691716",
+		long: "76.90069468166564"
+	},
+	{
+		id: 7,
+		name: "Стадион «Динамо»",
+		image: "img/places/place-1.jpg",
+		slug: "7",
+		lat: "43.24102986824371",
+		long: "76.89970672236744"
+	},
+	{
+		id: 8,
+		name: "Казахстанско-Немецкий университет",
+		image: "img/places/place-2.jpg",
+		slug: "8",
+		lat: "43.237999204620166",
+		long: "76.90468787320346"
+	},
+	{
+		id: 9,
+		name: "Музеи",
+		image: "img/places/place-3.jpeg",
+		slug: "9",
+		lat: "43.23521449584587",
+		long: "76.90246700413911"
+	}
+])
 onMounted(() => {
 	ymaps.ready(init)
 	function init() {
@@ -10,14 +83,14 @@ onMounted(() => {
 				center: [43.24807807452589, 76.9118235],
 				zoom: 16
 			})
-			console.log("map" + data)
-			for (let item of data) {
+			console.log("map" + data.value)
+			for (let item of data.value) {
 				console.log("map item " + JSON.stringify(item))
 				const place = new ymaps.Placemark(
 					[item.lat, item.long],
 					{
 						balloonContentHeader: item.name,
-						balloonContentBody: `<a href="${item.slug}">Перейти</a><br><img src="/src/assets/${item.image}" height="150" width="200"/>`
+						balloonContentBody: `<a href="${item.slug}">Перейти</a><br><img src="/src/assets/${item.image}" height="100" width="200"/>`
 					},
 					{
 						iconLayout: "default#image",
