@@ -2,7 +2,7 @@
 	{
 		"id": 1,
 		"name": "Роща Баума",
-		"image": "img/places/place-1",
+		"image": "/places/place-1",
 		"type": "jpg",
 		"slug": "1",
 		"lat": "43.24750555013902",
@@ -11,7 +11,7 @@
 	{
 		"id": 2,
 		"name": "Дом Баума",
-		"image": "img/places/place-2",
+		"image": "/places/place-2",
 		"type": "jpg",
 		"slug": "2",
 		"lat": "43.245340888407654",
@@ -20,7 +20,7 @@
 	{
 		"id": 3,
 		"name": "Академия наук",
-		"image": "img/places/place-3",
+		"image": "/places/place-3",
 		"type": "jpeg",
 		"slug": "3",
 		"lat": "43.24661492519598",
@@ -29,7 +29,7 @@
 	{
 		"id": 4,
 		"name": "Памятник Г.К. Бельгеру",
-		"image": "img/places/place-4",
+		"image": "/places/place-4",
 		"type": "jpg",
 		"slug": "4",
 		"lat": "43.25043488740608",
@@ -38,7 +38,7 @@
 	{
 		"id": 5,
 		"name": "Немецкий Дом",
-		"image": "img/places/place-5",
+		"image": "/places/place-5",
 		"type": "jpg",
 		"slug": "5",
 		"lat": "43.249968185074216",
@@ -47,7 +47,7 @@
 	{
 		"id": 6,
 		"name": "Мемориальная доска Э.Ф. Айриху.",
-		"image": "img/places/place-6",
+		"image": "/places/place-6",
 		"type": "jpg",
 		"slug": "6",
 		"lat": "43.246924972691716",
@@ -56,7 +56,7 @@
 	{
 		"id": 7,
 		"name": "Стадион «Динамо»",
-		"image": "img/places/place-1",
+		"image": "/places/place-1",
 		"type": "jpg",
 		"slug": "7",
 		"lat": "43.24102986824371",
@@ -65,7 +65,7 @@
 	{
 		"id": 8,
 		"name": "Казахстанско-Немецкий университет",
-		"image": "img/places/place-2",
+		"image": "/places/place-2",
 		"type": "jpg",
 		"slug": "8",
 		"lat": "43.237999204620166",
@@ -74,7 +74,7 @@
 	{
 		"id": 9,
 		"name": "Музеи",
-		"image": "img/places/place-3.jpeg",
+		"image": "/places/place-3.jpeg",
 		"type": "jpg",
 		"slug": "9",
 		"lat": "43.23521449584587",
