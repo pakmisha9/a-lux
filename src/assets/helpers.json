@@ -74,8 +74,8 @@
 	{
 		"id": 9,
 		"name": "Музеи",
-		"image": "/places/place-3.jpeg",
-		"type": "jpg",
+		"image": "/places/place-3",
+		"type": "jpeg",
 		"slug": "9",
 		"lat": "43.23521449584587",
 		"long": "76.90246700413911"
