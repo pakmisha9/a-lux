@@ -6,8 +6,8 @@ const props = defineProps({
 	}
 })
 
-function getImageUrl(image) {
-	return new URL(`../assets/${image}.jpg`, import.meta.url).href
+function getImageUrl(image, type) {
+	return new URL(`../assets/${image}.${type}`, import.meta.url).href
 }
 </script>
 
@@ -15,7 +15,7 @@ function getImageUrl(image) {
 	<div class="flex flex-col items-center">
 		<router-link :to="'/schema/' + item.slug" class="relative">
 			<div class="relative aspect-square h-[200px] w-[200px] lg:h-[250px] lg:w-[250px]">
-				<img v-if="item.image != null" :src="getImageUrl(item.image)" class="relative z-30 h-full w-full overflow-hidden rounded-full object-cover" alt="" />
+				<img v-if="item.image != null" :src="getImageUrl(item.image, item.type)" class="relative z-30 h-full w-full overflow-hidden rounded-full object-cover" alt="" />
 				<div class="absolute left-1/2 top-1/2 z-20 w-[250px] -translate-x-1/2 -translate-y-1/2 lg:w-[350px]">
 					<img src="@/assets/img/vectors/under-hero.png" class="h-full w-full" alt="" />
 				</div>
