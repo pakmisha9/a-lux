@@ -6,7 +6,7 @@ const data = ref([
 	{
 		id: 1,
 		name: "Роща Баума",
-		image: "img/places/place-1.jpg",
+		image: "@/assets/img/places/place-1.jpg",
 		slug: "1",
 		lat: "43.24750555013902",
 		long: "76.91522454103087"
