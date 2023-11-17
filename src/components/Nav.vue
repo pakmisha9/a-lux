@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch } from "vue"
+import { ref, watch, onMounted } from "vue"
 import MobileNav from "@/components/MobileNav.vue"
 const items = ref([
 	{
@@ -21,6 +21,7 @@ const items = ref([
 ])
 
 const isActiveMobileNav = ref(false)
+const isPageScroll = ref(false)
 
 watch(isActiveMobileNav, (newValue, oldValue) => {
 	if (newValue == true) {
@@ -30,15 +31,24 @@ watch(isActiveMobileNav, (newValue, oldValue) => {
 		document.querySelector("html").classList.remove("no-scroll")
 	}
 })
+onMounted(() => {
+	window.addEventListener("scroll", () => {
+		if (window.pageYOffset > 100) {
+			isPageScroll.value = true
+		} else {
+			isPageScroll.value = false
+		}
+	})
+})
 </script>
 
 <template>
-	<div class="absolute inset-x-0 top-0">
-		<div class="w-container py-4">
+	<div class="nav fixed inset-x-0 top-0 z-40" :class="{ active: isPageScroll }">
+		<div class="w-container py-3">
 			<div class="flex items-center justify-between">
 				<div>
 					<router-link to="/" class="inline-block">
-						<img src="@/assets/img/icons/logo.svg" class="w-20 lg:w-32" alt="" />
+						<img src="@/assets/img/icons/logo.svg" class="w-20" alt="" />
 					</router-link>
 				</div>
 
@@ -58,4 +68,11 @@ watch(isActiveMobileNav, (newValue, oldValue) => {
 	</div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.nav {
+	@apply transition-all duration-300 ease-in-out;
+	&.active {
+		@apply bg-white/60 backdrop-blur-2xl;
+	}
+}
+</style>
