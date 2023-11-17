@@ -39,7 +39,7 @@ const getItems = () => {
 				</div>
 				<div class="relative w-full xl:w-[40%]">
 					<div class="relative z-20 h-[300px] w-full overflow-hidden rounded-2xl xl:h-[500px] 2xl:h-[600px]">
-						<img :src="`/src/assets/${item.image}`" class="h-full w-full object-cover" alt="" />
+						<img :src="'/img/' + item.image + '.' + item.type" class="h-full w-full object-cover" alt="" />
 					</div>
 					<div class="absolute -bottom-20 left-5 z-10 hidden w-[600px] xl:block">
 						<img src="@/assets/img/vectors/under-hero.png" class="h-full w-full object-cover" alt="" />
