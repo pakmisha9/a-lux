@@ -5,9 +5,8 @@ const props = defineProps({
 		type: Object
 	}
 })
-const imageUrl = `./src/assets/${props.item.image}.jpg`
 
-// const imageUrl = new URL(`./src/assets/${props.item.image}.jpg`, import.meta.url).href
+const imageUrl = new URL(`/src/assets/${props.item.image}.jpg`, import.meta.url)
 </script>
 
 <template>
