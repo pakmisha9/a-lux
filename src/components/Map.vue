@@ -17,7 +17,7 @@ onMounted(() => {
 					[item.lat, item.long],
 					{
 						balloonContentHeader: item.name,
-						balloonContentBody: `<a href="${item.slug}">Перейти</a><br><img src="/img/${item.image}.${item.type}" height="100" width="200"/>`
+						balloonContentBody: `<a href="/schema/${item.slug}">Перейти</a><br><img src="/img/${item.image}.${item.type}" height="100" width="200"/>`
 					},
 					{
 						iconLayout: "default#image",
