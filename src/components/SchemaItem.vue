@@ -7,7 +7,7 @@ const props = defineProps({
 })
 
 function getImageUrl(image) {
-	return new URL(`./src/assets/${image}.jpg`, import.meta.url).href
+	return new URL(`/src/assets/${image}.jpg`, import.meta.url).href
 }
 </script>
 
