@@ -16,8 +16,8 @@ onMounted(() => {
 				const place = new ymaps.Placemark(
 					[item.lat, item.long],
 					{
-						balloonContentHeader: item.name,
-						balloonContentBody: `<a href="${item.slug}">Перейти</a><br><img src="/img/${item.image}.${item.type}" height="100" width="200"/>`
+						balloonContentHeader: item.name
+						// balloonContentBody: `<a href="${item.slug}">Перейти</a><br><img src="/img/${item.image}.${item.type}" height="100" width="200"/>`
 					},
 					{
 						iconLayout: "default#image",
