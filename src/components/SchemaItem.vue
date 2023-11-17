@@ -5,13 +5,14 @@ const props = defineProps({
 		type: Object
 	}
 })
+const imageUrl = new URL(`./src/assets/${item.image}.jpg`, import.meta.url).href
 </script>
 
 <template>
 	<div class="flex flex-col items-center">
 		<router-link :to="'/schema/' + item.slug" class="relative">
 			<div class="relative aspect-square h-[200px] w-[200px] lg:h-[250px] lg:w-[250px]">
-				<img v-if="item.image != null" :src="`/src/assets/${item.image}`" class="relative z-30 h-full w-full overflow-hidden rounded-full object-cover" alt="" />
+				<img v-if="item.image != null" :src="imageUrl" class="relative z-30 h-full w-full overflow-hidden rounded-full object-cover" alt="" />
 				<div class="absolute left-1/2 top-1/2 z-20 w-[250px] -translate-x-1/2 -translate-y-1/2 lg:w-[350px]">
 					<img src="@/assets/img/vectors/under-hero.png" class="h-full w-full" alt="" />
 				</div>
