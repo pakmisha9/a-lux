@@ -33,7 +33,7 @@ watch(isActiveMobileNav, (newValue, oldValue) => {
 })
 onMounted(() => {
 	window.addEventListener("scroll", () => {
-		if (window.pageYOffset > 100) {
+		if (window.pageYOffset > 20) {
 			isPageScroll.value = true
 		} else {
 			isPageScroll.value = false
@@ -48,7 +48,7 @@ onMounted(() => {
 			<div class="flex items-center justify-between">
 				<div>
 					<router-link to="/" class="inline-block">
-						<img src="@/assets/img/icons/logo.svg" class="w-20" alt="" />
+						<img src="@/assets/img/icons/logo.svg" class="w-14 lg:w-20" alt="" />
 					</router-link>
 				</div>
 
