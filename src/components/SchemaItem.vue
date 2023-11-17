@@ -13,9 +13,9 @@ function getImageUrl(image, type) {
 
 <template>
 	<div class="flex flex-col items-center">
-		<router-link :to="'/schema/' + item.slug" class="relative">
+		<router-link :to="'/schema/' + item.slug" class="schema-item relative">
 			<div class="relative aspect-square h-[200px] w-[200px] lg:h-[250px] lg:w-[250px]">
-				<img :src="'/img/' + item.image + '.' + item.type" class="relative z-30 h-full w-full overflow-hidden rounded-full object-cover" alt="" />
+				<img :src="'/img/' + item.image + '.' + item.type" class="schema-item__image relative z-30 h-full w-full overflow-hidden rounded-full object-cover" alt="" />
 				<div class="absolute left-1/2 top-1/2 z-20 w-[250px] -translate-x-1/2 -translate-y-1/2 lg:w-[350px]">
 					<img src="@/assets/img/vectors/under-hero.png" class="h-full w-full" alt="" />
 				</div>
@@ -31,4 +31,13 @@ function getImageUrl(image, type) {
 	</div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.schema-item {
+	&__image {
+		@apply transition-all duration-300 ease-in-out;
+		&:hover {
+			@apply scale-110;
+		}
+	}
+}
+</style>
